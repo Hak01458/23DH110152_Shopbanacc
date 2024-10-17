@@ -1,0 +1,28 @@
+﻿@model _23DH110152_Shopbanacc.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Thông tin chi tiết danh mục</h2>
+
+<div>
+    
+    <hr />
+    <dl class="media-middle">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.CategoryName)*@
+            Tên danh mục
+        </dt>
+        @* giá trị của trường category *@
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Cập nhập", "Edit", new { id = Model.CategoryID }, new { @class = "btn btn-primary btn-sm" })
+    @Html.ActionLink("Quay lại danh sách ", "Index", null, new { @class = "btn btn-primary btn-sm" })
+</p>
