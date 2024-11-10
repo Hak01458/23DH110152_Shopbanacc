@@ -1,0 +1,98 @@
+﻿@model _23DH110152_Shopbanacc.Models.ViewModel.HomeProductVM
+    @using PagedList.Mvc
+<style type="text/css">
+    .list-container {
+        justify-content: space-between;
+        display: flex;
+        width: 1400px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top: 3rem;
+    }
+    .product-item img {
+        width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+        height: auto; /* Tự động co dãn theo chiều rộng */
+        max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+        object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+    }
+    .product-item {
+        height: 350px;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .proD{
+        color:black;
+        margin-top:1rem;
+        font-size:15px;
+    }
+    .pagenation-container {
+        display: flex;
+        /*justify-content: center;*/ /* Căn giữa các mục phân trang */
+        list-style: none; /* Loại bỏ các chấm trước các trang */
+        padding: 0;
+        margin-top: 20px; /* Thêm khoảng cách phía trên */
+    }
+
+        .pagenation-container li {
+            margin: 0 5px; /* Khoảng cách giữa các trang */
+        }
+
+        .pagenation-container a, .pagenation-container span {
+            padding: 10px;
+            border-radius: 5px;
+            color: black;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+            .pagenation-container a:hover {
+                background-color: #ddd; /* Màu nền khi hover */
+            }
+</style>
+
+@if (Model.NewProducts != null && Model.NewProducts.Any())
+ {
+    <section class="container-fluid productList">
+        <h2>Danh sách sản phẩm</h2>
+        <ul class="list-container">
+            @foreach (var product in Model.NewProducts)
+                {
+                    <li class="product-item">
+                        <div>
+                            <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                                <img src="@product.ProductImage" />
+                            </a>
+                        </div>
+                        <div>
+                            <p class="proD">@product.ProductName</p>
+                            <p class="price">@product.ProductPrice</p>
+                            
+                            <p class="proDSale">
+                                Đã bán:&nbsp;@product.OrderDetails.Count
+                            </p>
+
+                        </div>
+                    
+</li>
+                }
+        </ul>
+    </section>
+    <div class="pagenation-container btn-primary">
+        @Html.PagedListPager(Model.NewProducts, page => Url.Action("Index", new
+   {
+       page,
+       searchTerm = Model.SearchTerm
+   }))
+    </div>
+
+ }
+else
+	{
+	         <p>Không tìm thấy sản phẩm phù hợp.</p>
+	}

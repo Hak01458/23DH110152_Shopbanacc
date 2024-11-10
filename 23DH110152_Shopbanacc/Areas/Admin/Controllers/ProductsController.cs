@@ -61,7 +61,7 @@ namespace _23DH110152_Shopbanacc.Areas.Admin.Controllers
             //Đoạn code liên quan đến phân trang 
             //Lấy số trang hiện tại (mặc định là trang 1 nếu không có giá trị)
             int pageNumber = page ?? 1;
-            int pageSize = 2; // Số sản phẩm mỗi trang
+            int pageSize = 5; // Số sản phẩm mỗi trang
             model.Products= products.ToPagedList(pageNumber,pageSize);
             return View(model);
             //var products = db.Products.Include(p => p.Category);
