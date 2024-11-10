@@ -1,0 +1,252 @@
+﻿.banner {
+    background-image: url("../Content/img/nen1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+    /*display: flex;*/
+    align-content: center;
+    /* justify-content: center;*/
+    color:white;
+}
+
+
+.banner-content {
+    text-align: center;
+    color: white;
+    margin-top: 30rem;
+}
+
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+
+    .banner-content p {
+        font-size: 1.5rem;
+    }
+
+    .banner-content a {
+        font-size: 2rem;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: deepskyblue;
+    color: white;
+    text-decoration: none;
+    /*font-weight: bold;*/
+}
+
+#futureProd {
+    text-align: center;
+}
+
+.proDContainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* flex-wrap: wrap;*/
+}
+
+.product-muc1 {
+    background-image: url("../Content/img/gundame.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 400px;
+    /*display: flex;*/
+    align-content: center;
+    /* justify-content: center;*/
+    color: yellow;
+}
+
+.product-muc2 {
+    background-image: url("../Content/img/anime1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 400px;
+    /*display: flex;*/
+    align-content: center;
+    /* justify-content: center;*/
+    color: yellow;
+}
+
+.product-muc3 {
+    background-image: url("../Content/img/lego.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 400px;
+    /*display: flex;*/
+    align-content: center;
+    /* justify-content: center;*/
+    color: yellow;
+}
+
+.ntn {
+    display: inline-block;
+    padding: 10px 0px;
+    /*background-color: deepskyblue;*/
+    color: orange;
+    text-decoration: none;
+    /*font-weight: bold;*/
+    font-size: 3rem;
+}
+
+.prodPrice {
+    font-size: 20px;
+    color: green;
+    /*   font-weight: bold;*/
+}
+
+.content-section {
+    text-align: center;
+    padding: 1px 60px;
+    margin-top: 1rem;
+}
+
+    .content-section h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        /*font-weight: bold;*/
+    }
+
+
+#productList {
+    text-align: center;
+    margin-top: -27rem;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+}
+
+    #productList h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+
+
+
+
+.proD {
+    font-size: 20px;
+    color: lawngreen;
+    font: arial;
+    margin-top: -50px;
+}
+
+.price {
+    font-size: 20px;
+    color: green;
+    margin-top: -80px;
+    /*  font-weight: bold;*/
+}
+
+.ace-img {
+    /*  max-width:100%;*/
+    width: 200px; /*Thay đổi kích thước theo mong muốn */
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+}
+
+#futureProd {
+    height: 10px;
+}
+
+
+#search-button {
+    color: blue;
+}
+
+#search-input {
+    width: 600px;
+    height: 25px;
+}
+
+#SanphamNB {
+    text-align: center;
+    margin-top: -450px;
+    margin-bottom: 10rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.List-NB {
+    justify-content: space-between;
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    /*margin-bottom:100px;*/
+    margin-top: 3rem;
+}
+
+.product-NB, .product-NB1, .product-NB2, .product-NB3 {
+    width: 220px; /* Đặt chiều rộng cố định cho các ô */
+    height: 300px; /* Đặt chiều cao cố định cho các ô */
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+    margin-right: 2rem;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+}
+
+    .product-NB img, .product-NB1 img, .product-NB2 img, .product-NB3 img {
+        width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+        height: auto; /* Tự động co dãn theo chiều rộng */
+        max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+        object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+    }
+
+    .product-NB a {
+        text-decoration: none;
+        color: black;
+    }
+
+.list-container {
+    justify-content: space-between;
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-item, .product-item1, .product-item2, .product-item3 {
+    width: 230px;
+    height: 300px;
+    margin-right: 2rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+    .product-item img, .product-item1 img, .product-item2 img, .product-item3 img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        margin-bottom: -3rem;
+    }
+
+    .product-item a, .product-item1 a, .product-item2 a, .product-item3 a {
+        text-decoration: none;
+        color: black;
+    }
+
+.toplist h2 {
+}
+
+.SPNB h2 {
+    color: red;
+}
+

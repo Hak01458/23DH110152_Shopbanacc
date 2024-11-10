@@ -1,0 +1,84 @@
+﻿@model _23DH110152_Shopbanacc.Models.ViewModel.ProductDetailsVM
+@using PagedList.Mvc
+<style type="text/css">
+    .SanphamNB {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .feature-container {
+      /*  justify-content: space-between;*/
+      /*  display: flex;*/
+        width: 250px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top: 3rem;
+     
+    }
+
+    .product-NB {
+        height: 250px;
+        border:groove;
+        margin-right: 2rem;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-block:1rem;
+    }
+
+        .product-NB img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+
+        .product-NB a {
+            text-decoration: none;
+            color: black;
+        }
+
+    .price {
+        margin-top: 1rem;
+    }
+</style>
+
+@if(Model.TopProducts != null && Model.TopProducts.Any())
+            {
+                <section class="container-fluid SanphamNB">
+                    <h4 style="font-weight:bold;">Sản phẩm bán chạy</h4>
+                    <ul class="feature-container">
+            @foreach (var product in Model.TopProducts)
+            {
+                <li class="product-NB" >
+                    <div>
+                        <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                            @*<img src="@Html.DisplayFor(modelItem => product.ProductImage)" />*@
+                            <img src="@product.ProductImage" />
+                        </a>
+                    </div>
+                    <div>
+                        <h5 class="prodName">
+                            @Html.DisplayFor(modelItem => product.ProductName)
+                        </h5>
+                        <p class="price">
+                            @*@Html.DisplayFor(modelItem => product.ProductPrice)*@
+                            @product.ProductPrice
+                        </p>
+                        </div>
+                    </li>
+            }
+                        </ul>
+                </section>
+                <div class="pagination-container btn btn-primary">
+                        @Html.PagedListPager(Model.TopProducts, page => Url.Action("ProductDetails", new
+                   {
+                       id = Model.product.ProductID,
+                       quantity = Model.quantity,
+                       page
+                   }))
+                </div>
+            }

@@ -1,33 +1,220 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+@model _23DH110152_Shopbanacc.Models.ViewModel.HomeProductVM
+    @{ 
+        ViewBag.Title = "Customer home page";
+        @*<link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css"/>*@
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+    }
+<style type="text/css">
+  
+    .banner {
+        background-image: url("../Content/img/nen1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: white;
+    }
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+
+    .banner-content {
+        text-align: center;
+        color: white;
+        margin-top: 30rem;
+    }
+
+        .banner-content h2 {
+            font-size: 2rem;
+        }
+
+        .banner-content p {
+            font-size: 1.5rem;
+        }
+
+        .banner-content a {
+            font-size: 2rem;
+        }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: deepskyblue;
+        color: white;
+        text-decoration: none;
+        /*font-weight: bold;*/
+    }
+
+    #futureProd {
+        text-align: center;
+    }
+
+    .proDContainer {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        /* flex-wrap: wrap;*/
+    }
+
+    .product-muc1 {
+        background-image: url("../Content/img/gundame.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .product-muc2 {
+        background-image: url("../Content/img/anime1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .product-muc3 {
+        background-image: url("../Content/img/lego.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .ntn {
+        display: inline-block;
+        padding: 10px 0px;
+        /*background-color: deepskyblue;*/
+        color: orange;
+        text-decoration: none;
+        /*font-weight: bold;*/
+        font-size: 3rem;
+    }
+
+    .prodPrice {
+        font-size: 20px;
+        color: green;
+        /*   font-weight: bold;*/
+    }
+
+    .content-section {
+        text-align: center;
+        padding: 1px 60px;
+        margin-top: 1rem;
+    }
+
+        .content-section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            /*font-weight: bold;*/
+        }
+
+
+    .proD {
+        font-size: 20px;
+        color: lawngreen;
+        font: arial;
+        margin-top: -50px;
+    }
+
+    .price {
+        font-size: 20px;
+        color: green;
+        margin-top: -80px;
+        /*  font-weight: bold;*/
+    }
+
+
+    #futureProd {
+     margin-bottom:300px;
+
+    }
+
+    .toplist h2 {
+    }
+
+    .SPNB h2 {
+        color: red;
+    }
+    .productList{
+        text-align:center;
+    }
+    .productList h2{
+        font-size:30px;
+    }
+   .search-input{
+       width:400px;
+       height:30px;
+   }
+    .search-button {
+        height: 30px;
+    }
+</style>
+ @*Phần Banner*@ 
+<section class="container-fluid banner">
+    <div class="banner-content">
+        <h2>Chào mừng bạn đến với shop bán mô hình của chúng tôi </h2>
+        <p>Rất nhiều mô hình đẹp đang chờ bạn săn đón</p>
+        <a href="#" class="btn">Bắt đầu mua sắm</a>
     </div>
-</main>
+</section>
+
+<div id="futureProd" class="content-section">
+    <div class="proDContainer">
+        <div class="product-muc3">
+            @*<img src="~/Content/img/gundame.jpg" />*@
+            <a href="#" class="ntn">GunDam</a>
+            @*<p class="prodDescription">Gia:</p>*@
+                @*<p class="prodPrice">129.000d</p>*@
+        </div>
+        <div class="product-muc1">
+            @*<img src="~/Content/img/anime1.jpg" />*@
+            <a href="#" class="ntn">Anime</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">60.000d</p>*@
+        </div>
+        <div class="product-muc2">
+            @*<img src="~/Content/img/lego.jpg" />@
+            <a href="#" class="ntn">Lego</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">50.000d</p>*@
+        </div>
+    </div>
+</div>
+
+ @*Phần tìm kiếm*@ 
+
+<div class="productList">
+    <h2>Tìm kiếm sản phẩm</h2>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+            <div class="form-group toplist">
+                @Html.TextBoxFor(m => m.SearchTerm, new
+           {
+               @class = "search-input",
+               placeholder = "Nhập tên, mô tả hoặc thể loại sản phẩm"
+           })
+            <button type="submit" class="search-button">Tìm kiếm</button>
+
+            </div>
+    }
+</div>
+
+
+    
+@Html.Partial("PVFeatureProduct",Model)
+
+@Html.Partial("PVNewProduct",Model)

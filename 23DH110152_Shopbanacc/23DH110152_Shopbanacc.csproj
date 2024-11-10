@@ -139,7 +139,10 @@
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,7 +182,15 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MyStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\Cart.cs" />
+    <Compile Include="Models\ViewModel\CartItem.cs" />
+    <Compile Include="Models\ViewModel\CartService.cs" />
+    <Compile Include="Models\ViewModel\CheckoutVM.cs" />
+    <Compile Include="Models\ViewModel\HomeProductVM.cs" />
+    <Compile Include="Models\ViewModel\LoginVM.cs" />
+    <Compile Include="Models\ViewModel\ProductDetailsVM.cs" />
     <Compile Include="Models\ViewModel\ProductSearchVM.cs" />
+    <Compile Include="Models\ViewModel\RegisterVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +210,57 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\img\1a.png" />
+    <Content Include="Content\img\1b.png" />
+    <Content Include="Content\img\1c.png" />
+    <Content Include="Content\img\1d.png" />
+    <Content Include="Content\img\acconticon.jpg" />
+    <Content Include="Content\img\ace.jpg" />
+    <Content Include="Content\img\ace1.jpg" />
+    <Content Include="Content\img\ace2.jpg" />
+    <Content Include="Content\img\ace3.jpg" />
+    <Content Include="Content\img\ace4.jpg" />
+    <Content Include="Content\img\ace5.jpg" />
+    <Content Include="Content\img\anhnen.jpg" />
+    <Content Include="Content\img\anhnen1.jpg" />
+    <Content Include="Content\img\anime.jpg" />
+    <Content Include="Content\img\anime1.jpg" />
+    <Content Include="Content\img\asscred.jpg" />
+    <Content Include="Content\img\blmwk.jpg" />
+    <Content Include="Content\img\boa.png" />
+    <Content Include="Content\img\cart.jpg" />
+    <Content Include="Content\img\CartIcon.jpg" />
+    <Content Include="Content\img\fi1.png" />
+    <Content Include="Content\img\fi2.png" />
+    <Content Include="Content\img\go.png" />
+    <Content Include="Content\img\goku.png" />
+    <Content Include="Content\img\gow.jpg" />
+    <Content Include="Content\img\gundam1.jpg" />
+    <Content Include="Content\img\gundam2.jpg" />
+    <Content Include="Content\img\gundam3.jpg" />
+    <Content Include="Content\img\gundam4.jpg" />
+    <Content Include="Content\img\gundame.jpg" />
+    <Content Include="Content\img\hancok.png" />
+    <Content Include="Content\img\hearticon.jpg" />
+    <Content Include="Content\img\kai.png" />
+    <Content Include="Content\img\lego.jpg" />
+    <Content Include="Content\img\littlenightmare2.jpg" />
+    <Content Include="Content\img\littlenightme.jpg" />
+    <Content Include="Content\img\logo.jpg" />
+    <Content Include="Content\img\lu.png" />
+    <Content Include="Content\img\lu1.png" />
+    <Content Include="Content\img\momo.jpg" />
+    <Content Include="Content\img\naruto.png" />
+    <Content Include="Content\img\nen.jpg" />
+    <Content Include="Content\img\nen1.jpg" />
+    <Content Include="Content\img\re2.jpg" />
+    <Content Include="Content\img\re4.jpg" />
+    <Content Include="Content\img\remove.jpg" />
+    <Content Include="Content\img\thetd.jpg" />
+    <Content Include="Content\img\vnpay.jpg" />
+    <Content Include="Content\img\zalopay.jpg" />
+    <Content Include="Content\img\zo.png" />
+    <Content Include="Content\myStyle\CustomerHome.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -228,7 +290,7 @@
     </Content>
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
@@ -243,6 +305,7 @@
     <Content Include="Areas\Admin\Views\Products\PVCreateEditProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVProdInfo.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVListProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_CustomerLayout.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -268,6 +331,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_MasterLayout.cshtml" />
+    <Content Include="Views\Home\TrangChu.cshtml" />
+    <Content Include="Views\Home\PVFeatureProduct.cshtml" />
+    <Content Include="Views\Home\PVNewProduct.cshtml" />
+    <Content Include="Views\Home\ProductDetails.cshtml" />
+    <Content Include="Views\Home\_PVRelatedProduct.cshtml" />
+    <Content Include="Views\Home\_PVTopProduct.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Order\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

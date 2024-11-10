@@ -1,0 +1,446 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style type="text/css">
+    .banner {
+        background-image: url("../Content/img/nen1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 50px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: white;
+    }
+
+
+    .banner-content {
+        text-align: center;
+        color: white;
+        margin-top: 30rem;
+    }
+
+        .banner-content h2 {
+            font-size: 2rem;
+        }
+
+        .banner-content p {
+            font-size: 1.5rem;
+        }
+
+        .banner-content a {
+            font-size: 2rem;
+        }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: deepskyblue;
+        color: white;
+        text-decoration: none;
+        /*font-weight: bold;*/
+    }
+
+    #futureProd {
+        text-align: center;
+    }
+
+    .proDContainer {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        /* flex-wrap: wrap;*/
+    }
+
+    .product-muc1 {
+        background-image: url("../Content/img/gundame.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .product-muc2 {
+        background-image: url("../Content/img/anime1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .product-muc3 {
+        background-image: url("../Content/img/lego.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        width: 400px;
+        /*display: flex;*/
+        align-content: center;
+        /* justify-content: center;*/
+        color: yellow;
+    }
+
+    .ntn {
+        display: inline-block;
+        padding: 10px 0px;
+        /*background-color: deepskyblue;*/
+        color: orange;
+        text-decoration: none;
+        /*font-weight: bold;*/
+        font-size: 3rem;
+    }
+
+    .prodPrice {
+        font-size: 20px;
+        color: green;
+        /*   font-weight: bold;*/
+    }
+
+    .content-section {
+        text-align: center;
+        padding: 1px 60px;
+        margin-top: 1rem;
+    }
+
+        .content-section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            /*font-weight: bold;*/
+        }
+
+
+    #productList {
+        text-align: center;
+        margin-top: -27rem;
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+    }
+
+        #productList h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+
+
+
+
+
+
+
+
+    .proD {
+        font-size: 20px;
+        color: lawngreen;
+        font: arial;
+        margin-top: -50px;
+    }
+
+    .price {
+        font-size: 20px;
+        color: green;
+        margin-top: -80px;
+        /*  font-weight: bold;*/
+    }
+
+    .ace-img {
+        /*  max-width:100%;*/
+        width: 200px; /*Thay đổi kích thước theo mong muốn */
+        height: auto; /* Giữ tỷ lệ hình ảnh */
+    }
+
+    #futureProd {
+        height: 10px;
+    }
+
+
+    #search-button {
+        color: blue;
+    }
+
+    #search-input {
+        width: 600px;
+        height: 25px;
+    }
+
+    #SanphamNB {
+        text-align: center;
+        margin-top: -450px;
+        margin-bottom: 10rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .List-NB {
+        justify-content: space-between;
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+        /*margin-bottom:100px;*/
+        margin-top: 3rem;
+    }
+
+    .product-NB, .product-NB1, .product-NB2, .product-NB3 {
+        width: 220px; /* Đặt chiều rộng cố định cho các ô */
+        height: 300px; /* Đặt chiều cao cố định cho các ô */
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        margin-right: 2rem;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 300px;
+    }
+
+        .product-NB img, .product-NB1 img, .product-NB2 img, .product-NB3 img {
+            width: 100%; /* Để ảnh vừa với chiều rộng của ô */
+            height: auto; /* Tự động co dãn theo chiều rộng */
+            max-height: 150px; /* Giới hạn chiều cao tối đa của ảnh */
+            object-fit: cover; /* Ảnh sẽ cắt bớt nếu vượt quá giới hạn */
+        }
+
+        .product-NB a {
+            text-decoration: none;
+            color: black;
+        }
+
+    .list-container {
+        justify-content: space-between;
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-item, .product-item1, .product-item2, .product-item3 {
+        width: 230px;
+        height: 300px;
+        margin-right: 2rem;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 400px;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+    }
+
+        .product-item img, .product-item1 img, .product-item2 img, .product-item3 img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: -3rem;
+        }
+
+        .product-item a, .product-item1 a, .product-item2 a, .product-item3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+    .toplist h2 {
+    }
+
+    .SPNB h2 {
+        color: red;
+    }
+</style>
+
+<section class="banner">
+    <div class="banner-content">
+        <h2>Chào mừng bạn đến với shop bán mô hình của chúng tôi </h2>
+        <p>Rất nhiều mô hình đẹp đang chờ bạn săn đón</p>
+        <a href="#" class="btn">Bắt đầu mua sắm</a>
+    </div>
+</section>
+@*<section id="search" class="content-section">
+        <h2>TÌm kiếm sản phẩm</h2>
+        <điv class="search-container">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa...."/>
+            <button id="search-button">Tìm kiếm</button>
+        </điv>
+    </section>*@
+
+<section id="futureProd" class="content-section">
+    <div class="proDContainer">
+        <div class="product-muc1">
+            <!--<img src="~/Content/img/gundame.jpg" />-->
+            <a href="#" class="ntn">GunDam</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">129.000d</p>*@
+        </div>
+        <div class="product-muc2">
+            @*<img src="~/Content/img/anime1.jpg" />*@
+            <a href="#" class="ntn">Anime</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">60.000d</p>*@
+        </div>
+        <div class="product-muc3">
+            @*<img src="~/Content/img/lego.jpg" />*@
+            <a href="#" class="ntn">Lego</a>
+            @*<p class="prodDescription">Gia:</p>
+                <p class="prodPrice">50.000d</p>*@
+        </div>
+    </div>
+</section>
+<section id="SanphamNB" class="SPNB">
+    <h2>Sản phẩm nổi bậc</h2>
+    <div class="List-NB">
+        <div class="product-NB">
+            <a href="~/Product/ProductDetail">
+                <img src="~/Content/img/ace.jpg" />
+            </a>
+            <a href="~/Product/ProductDetail"><h3>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</h3></a>
+
+        </div>
+        <div class="product-NB1">
+            <img src="~/Content/img/goku.png" />
+            <h3>Mô Hình Songoku Ultra vô cực Có Led – Cao 29cm nặng 1400gr – Hộp Màu</h3>
+
+        </div>
+        <div class="product-NB2">
+            <img src="~/Content/img/naruto.png" />
+            <h3>Mô hình Naruto Lục đạo Cửu Vĩ Rasengan – Cao 28cm Nặng 1,5kg – Có hộp màu</h3>
+
+        </div>
+        <div class="product-NB3">
+            <img src="~/Content/img/hancok.png" />
+            <h3>Mô Hình Boa Hancock ngồi ghế – Cao 16cm nặng 1200gr – Hộp màu</h3>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="productList">
+    <div class="toplist">
+        <h2>Danh sách sản phẩm</h2>
+        <input type="text" id="search-input" placeholder="Tìm kiếm những mô hình mà bạn yêu thích..." />
+        <button id="search-button">Tìm kiếm</button>
+    </div>
+    <div class="list-container">
+        <div class="product-item">
+            <a href="~/Product/ProductDetail">
+                <img src="~/Content/img/ace.jpg" />
+            </a>
+            <a href="~/Product/ProductDetail"><h3>Mô Hình ACE đứng nâng cầu có Led – Cao 39cm nặng 3kg1 – Box Carton</h3></a>
+            <p class="proD">Gia:</p>
+            <p class="price">930.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item1">
+            <img src="~/Content/img/goku.png" />
+            <h3>Mô Hình Songoku Ultra vô cực Có Led – Cao 29cm nặng 1400gr – Hộp Màu</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">550.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item2">
+            <img src="~/Content/img/naruto.png" />
+            <h3>Mô hình Naruto Lục đạo Cửu Vĩ Rasengan – Cao 28cm Nặng 1,5kg – Có hộp màu</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">430.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item3">
+            <img src="~/Content/img/hancok.png" />
+            <h3>Mô Hình Boa Hancock ngồi ghế – Cao 16cm nặng 1200gr – Hộp màu</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">380.000<span>&#8363;</span></p>
+        </div>
+
+    </div>
+    <div class="list-container">
+        <div class="product-item">
+            <a href="#">
+                <img src="~/Content/img/1a.png" />
+            </a>
+            <a href="#"><h3>Alice Gear Aegis x Megami Device Kaede Agatsuma Kaiden - Kotobukiya</h3></a>
+            <p class="proD">Gia:</p>
+            <p class="price">1.890.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item1">
+            <img src="~/Content/img/1b.png" />
+            <h3>Ichiban Kuji One Piece Film Red A</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">1.680.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item2">
+            <img src="~/Content/img/1c.png" />
+            <h3>Asra Archer Shadow Edition Megami Device - Kotobukiya</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">1.280.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item3">
+            <img src="~/Content/img/1d.png" />
+            <h3>Nendoroid Doll Kyojuro Rengoku - Demon Slayer Kimetsu No Yaiba</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">1.990.000<span>&#8363;</span></p>
+        </div>
+
+    </div>
+    <div class="list-container">
+        <div class="product-item">
+            <a href="#">
+                <img src="~/Content/img/lu.png" />
+            </a>
+            <a href="#"><h3>Mô hình figure: Luffy Tay Lửa</h3></a>
+            <p class="proD">Gia:</p>
+            <p class="price">345.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item1">
+            <img src="~/Content/img/lu1.png" />
+            <h3>Mô hình figure: Luffy Gear 5 Tay Đỏ – GK</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">525.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item2">
+            <img src="~/Content/img/zo.png" />
+            <h3>Mô hình figure: Zoro Chiến Đấu Chân Lửa – 2 Mặt</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">240.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item3">
+            <img src="~/Content/img/boa.png" />
+            <h3>Mô hình figure: Boa Hancock – GK</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">465.000<span>&#8363;</span></p>
+        </div>
+
+    </div>
+    <div class="list-container">
+        <div class="product-item">
+            <a href="#">
+                <img src="~/Content/img/fi1.png" />
+            </a>
+            <a href="#"><h3>Mô hình figure: Black Freeza Frieza</h3></a>
+            <p class="proD">Gia:</p>
+            <p class="price">280.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item1">
+            <img src="~/Content/img/fi2.png" />
+            <h3>Mô hình figure: Gold Freeza Frieza – Vàng</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">280.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item2">
+            <img src="~/Content/img/go.png" />
+            <h3>Mô hình figure: Super Saiyan Son Goku – Resolution Of Soldiers Vol.1</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">150.000<span>&#8363;</span></p>
+        </div>
+        <div class="product-item">
+            <img src="~/Content/img/kai.png" />
+            <h3>Mô hình figure: Kaido 30cm</h3>
+            <p class="proD">Gia:</p>
+            <p class="price">1.560.000<span>&#8363;</span></p>
+        </div>
+
+    </div>
+</section>
