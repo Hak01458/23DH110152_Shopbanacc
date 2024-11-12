@@ -4,17 +4,20 @@
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
+
         <script>
-    function enableAddressEdit() {
-        docunent.getElenentById("shippingAddress").renoveAttribute("readonly");
-        docunent.getEtementById("newAddressGroup").style.display = "block";
-    }
+            function enableAddressEdit() {
+                document.getElementById("shippingAddress").removeAttribute("readonly");
+                document.getElementById("newAddressGroup").style.display = "block";
+            }
+
             function updateShippingAddress() {
-                var newAddress = document.getElenentById("newShippingAddress").value;
+                var newAddress = document.getElementById("newShippingAddress").value;
                 if (newAddress) {
-                    docunent.getElementById("shippingAddress").value = newAddress;
+                    document.getElementById("shippingAddress").value = newAddress;
                 }
             }
+
         </script>
 
         <h2>ĐẶT HÀNG</h2>

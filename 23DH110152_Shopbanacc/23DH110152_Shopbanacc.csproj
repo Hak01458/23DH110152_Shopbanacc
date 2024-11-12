@@ -306,6 +306,7 @@
     <Content Include="Areas\Admin\Views\Products\PVProdInfo.cshtml" />
     <Content Include="Areas\Admin\Views\Products\PVListProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_CustomerLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\PV_DetailDeteleProducts.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
